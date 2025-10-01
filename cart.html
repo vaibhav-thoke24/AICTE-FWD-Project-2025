@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - TrendyGo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar flex container">
+            <a href="index.html" class="logo">Trendy<span>Go</span></a>
+            <ul class="navlist flex">
+                <li><a href="index.html" class="link hover-underline-animation">Home</a></li>
+                <li><a href="#" class="link hover-underline-animation">Shop</a></li>
+                <li><a href="#" class="link hover-underline-animation">Page</a></li>
+                <li><a href="#" class="link hover-underline-animation">Blog</a></li>
+                <li><a href="#" class="link hover-underline-animation">Contact</a></li>
+                <li class="nav-icons flex">
+                    <a href="#" class="icon"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <a href="#" class="icon"><i class="fa-solid fa-user"></i></a>
+                    <a href="cart.html" class="icon icon-active cart-link">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="cart-count" aria-label="Cart items count">0</span>
+                    </a>
+                </li>
+            </ul>
+            <a href="#" class="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </a>
+        </nav>
+        <div class="overlay" id="overlay"></div>
+    </header>
+
+    <main class="section">
+        <div class="container">
+            <h2 class="cart-title">Your Cart</h2>
+            <div class="line"></div>
+
+            <div id="cart-empty" class="cart-empty" aria-live="polite">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <p>Your cart is empty.</p>
+                <a href="index.html" class="btn btn-primary">Continue Shopping</a>
+            </div>
+
+            <div id="cart-wrapper" class="cart-wrapper" hidden>
+                <div class="cart-items">
+                    <div class="cart-header">
+                        <span>Product</span>
+                        <span>Price</span>
+                        <span>Quantity</span>
+                        <span>Subtotal</span>
+                        <span></span>
+                    </div>
+                    <div id="cart-list" class="cart-list">
+                        <!-- Items will be rendered here -->
+                    </div>
+                </div>
+
+                <aside class="cart-summary">
+                    <h3>Order Summary</h3>
+                    <div class="summary-row">
+                        <span>Items</span>
+                        <span id="summary-items">0</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span id="summary-subtotal">₹0</span>
+                    </div>
+                                         <div class="summary-row">
+                         <span>Shipping</span>
+                        <span id="summary-shipping">₹0</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <span id="summary-total">₹0</span>
+                    </div>
+                    <button id="checkout-btn" class="btn" type="button">Checkout</button>
+                    <button id="clear-cart-btn" class="btn btn-outline" type="button">Clear Cart</button>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <footer class="section">
+        <div class=" footer-container container flex wrap">
+            <ul class="footer-list">
+                <li><a href="#" class="footer-link">About Us</a></li>
+                <li><a href="#" class="footer-link">Online store</a></li>
+                <li><a href="#" class="footer-link">Blog</a></li>
+                <li><a href="#" class="footer-link">Contact Us</a></li>
+            </ul>
+            <ul class="footer-list">
+                <li><a href="#" class="footer-link">Login/Register</a></li>
+                <li><a href="cart.html" class="footer-link">Your Cart</a></li>
+                <li><a href="#" class="footer-link">Wishlist Items</a></li>
+                <li><a href="#" class="footer-link">Your Checkout</a></li>
+            </ul>
+            <ul class="footer-list">
+                <li><a href="#" class="footer-link">FAQs</a></li>
+                <li><a href="#" class="footer-link">Term of Services</a></li>
+                <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                <li><a href="#" class="footer-link">Return Policy</a></li>
+            </ul>
+            <ul class="footer-list">
+                <li class="footer-logo">
+                    <a href="index.html" class="logo">Trendy<span>Go</span></a>
+                </li>
+                <li>
+                    <p class="details">ABCD Street, XYZ City</p>
+                </li>
+                <li>
+                    <p class="details">xyz@gmail.com</p>
+                </li>
+                <li>
+                    <p class="details">+91 12345 67890</p>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright &copy; <a href="#" class="footer-link">TrendyGo.</a></p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        // Minimal page-specific boot: render cart if present
+        document.addEventListener('DOMContentLoaded', function () {
+            if (window.renderCartPage) {
+                window.renderCartPage();
+            }
+        });
+    </script>
+</body>
+
+</html> 

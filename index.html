@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!-- Navbar here -->
+    <header>
+        <nav class="navbar flex container">
+            <a href="#" class="logo">Trendy<span>Go</span>
+            </a>
+            <ul class="navlist flex">
+                <li><a href="#" class="link hover-underline-animation link-active">Home</a></li>
+                <li><a href="#" class="link hover-underline-animation">Shop</a></li>
+                <li><a href="#" class="link hover-underline-animation">Page</a></li>
+                <li><a href="#" class="link hover-underline-animation">Blog</a></li>
+                <li><a href="#" class="link hover-underline-animation">Contact</a></li>
+                <li class="nav-icons flex">
+                    <a href="#" class="icon"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <a href="#" class="icon"><i class="fa-solid fa-user"></i></a>
+                    <a href="cart.html" class="icon icon-active cart-link">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="cart-count" aria-label="Cart items count">0</span>
+                    </a>
+                </li>
+            </ul>
+
+            <a href="#" class="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </a>
+        </nav>
+        <div class="overlay" id="overlay"></div>
+
+    </header>
+
+    <!-- Main content here -->
+    <main>
+        <section class="hero ">
+            <div class="hero-content flex container ">
+                <div>
+                    <h3>Summer Fashion</h3>
+                    <h1>New Collection</h1>
+                    <h4>Big sale of this week up to<span> 25%</span></h4>
+                    <button class="btn">
+                        <span class="description">
+                            Shop Now
+                        </span>
+                        <div class="ocean"></div>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="category-container container">
+                <div class="category">
+                    <img src="images/ImageForMen.png" alt="Category 1">
+                    <button id="btnCatMen">for Men's</button>
+                </div>
+                <div class="category">
+                    <img src="images/ImageForKids.png" alt="Category 1">
+                    <button id="btnCatKids">for Kid's</button>
+                </div>
+                <div class="category">
+                    <img src="images/ImageForAccess.png" alt="Category 1">
+                    <button id="btnCatAccessories">Accessories</button>
+                </div>
+                <div class="category">
+                    <img src="images/ImageForWomen.png" alt="Category 1">
+                    <button id="btnCatWomen">for women's</button>
+                </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <!-- Our Products (Dynamic) -->
+                <div id="our-products" class="our-products">
+                    <h2>Our Products</h2>
+                    <div class="line"></div>
+                    <p id="our-products-sub" style="text-align:center; margin-top:.5rem; color:#555; font-size:.95rem;">
+                    </p>
+                    <div class="our-products-actions" style="text-align:center; margin:.25rem 0 1rem 0;">
+                        <button id="btnCatAll" class="btn btn-outline">All Products</button>
+                    </div>
+                    <div id="our-products-grid" class="card-container flex wrap"></div>
+                </div>
+
+                <h2>New Product</h2>
+                <div class="line"></div>
+                <div class="card-container flex wrap">
+                    <div class="card" data-category="Accessories" data-tags="Popular"
+                        data-name="Men's Stylish Grey Running Shoes" data-price="1999">
+                        <img src="images/card-image1.jpg" alt="Men's Stylish Grey Running Shoes">
+                        <div class="card-content">
+                            <p class="title">
+                                Men's Stylish Grey Running Shoes
+                            </p>
+                            <div class="price">
+                                <span class="amount">₹1,999</span>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="card sale" data-category="women" data-tags="Popular"
+                        data-name="Elegant Black Faux Leather Tote Bag" data-price="2499">
+                        <img src="images/card-image2.jpg" alt="Elegant Black Faux Leather Tote Bag">
+                        <div class="card-content">
+                            <p class="title">
+                                Elegant Black Faux Leather Tote Bag
+                            </p>
+                            <div class="price">
+                                <del>₹3,599</del>
+                                <span class="amount">₹2,499</span>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="card new" data-category="men" data-tags="New"
+                        data-name="Men's Classic Grey Wool Duffle Coat" data-price="6800">
+                        <img src="images/card-image3.jpg" alt="Men's Classic Grey Wool Duffle Coat">
+                        <div class="card-content">
+                            <p class="title">
+                                Men's Classic Grey Wool Duffle Coat
+                            </p>
+                            <div class="price">
+                                <span class="amount">₹6,800</span>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="card new" data-category="men" data-tags="New"
+                        data-name="Men's Minimalist Black Overcoat" data-price="4499">
+                        <img src="images/card-image4.jpg" alt="Men's Minimalist Black Overcoat">
+                        <div class="card-content">
+                            <p class="title">
+                                Men's Minimalist Black Overcoat
+                            </p>
+                            <div class="price">
+                                <span class="amount">₹4,499</span>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="sale-container">
+                <h3>New Trend 2025</h3>
+                <h1>Women's Collection</h1>
+                <div class="line"></div>
+                <h4>Big <span class="sale-word">Sale</span> of this Week</h4>
+                <button class="btn-Secondary-Banner">Shop Now</button>
+            </div>
+
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2>Best Sale</h2>
+                <div class="line"></div>
+                <div class="card-container flex wrap">
+                    <div class="card" data-category="Accessories" data-tags="Popular"
+                        data-name=" Modern Navy Camo Print Backpack" data-price="1499">
+                        <img src="images/card-image5.jpg" alt="Modern Navy Camo Print Backpack">
+                        <div class="card-content">
+                            <p class="title">
+                                Modern Navy Camo Print Backpack
+                            </p>
+                            <div class="price">
+                                <span class="amount">₹1,499</span>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="card new" data-category="Accessories" data-tags="New"
+                        data-name="Compact Navy Blue J-Hook Umbrella" data-price="499">
+                        <img src="images/card-image6.jpg" alt="Compact Navy Blue J-Hook Umbrella">
+                        <div class="card-content">
+                            <p class="title">
+                                Compact Navy Blue J-Hook Umbrella
+                            </p>
+                            <div class="price">
+                                <span class="amount">₹499</span>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="card" data-category="Accessories" data-tags="Popular"
+                        data-name="Braided Tan Leather Bracelet with Magnetic Clasp" data-price="199">
+                        <img src="images/card-image7.jpg" alt="Braided Tan Leather Bracelet with Magnetic Clasp">
+                        <div class="card-content">
+                            <p class="title">
+                                Braided Tan Leather Bracelet with Magnetic Clasp
+                            </p>
+                            <div class="price">
+                                <span class="amount">₹199</span>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="card sale" data-category="women" data-tags="Popular"
+                        data-name="Classic Black Y-Back Suspenders" data-price="399">
+                        <img src="images/card-image8.jpg" alt="Classic Black Y-Back Suspenders">
+                        <div class="card-content">
+                            <p class="title">
+                                Classic Black Y-Back Suspenders
+                            </p>
+                            <div class="price">
+                                <del>₹499</del>
+                                <span class="amount">₹399</span>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="card-container flex wrap">
+                    <div class="card sale" data-category="women" data-tags="Popular"
+                        data-name="Chic Plaid Ankle Boots with Metal Toe Cap" data-price="5899">
+                        <img src="images/card-image9.jpg" alt="Chic Plaid Ankle Boots with Metal Toe Cap">
+                        <div class="card-content">
+                            <p class="title">
+                                Chic Plaid Ankle Boots with Metal Toe Cap
+                            </p>
+                            <div class="price">
+                                <del>₹6,899</del>
+                                <span class="amount">₹5,899</span>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="card new" data-category="women" data-tags="New"
+                        data-name="Modern Grey Felt Handbag with Leather Pocket" data-price="2199">
+                        <img src="images/card-image10.jpg" alt="Modern Grey Felt Handbag with Leather Pocket">
+                        <div class="card-content">
+                            <p class="title">
+                                Modern Grey Felt Handbag with Leather Pocket
+                            </p>
+                            <div class="price">
+                                <span class="amount">₹2,199</span>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="card" data-category="Accessories" data-tags="Popular"
+                        data-name="Urban Black Roll-Top Backpack with Leather Pocket" data-price="2499">
+                        <img src="images/card-image11.jpg" alt="Urban Black Roll-Top Backpack">
+                        <div class="card-content">
+                            <p class="title">
+                                Urban Black Roll-Top Backpack with Leather Pocket
+                            </p>
+                            <div class="price">
+                                <span class="amount">₹2,499</span>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="card sale" data-category="men" data-tags="Popular"
+                        data-name="Men Regular Fit Dyed/ombre Casual shirt" data-price="1499">
+                        <img src="images/card-image12.jpg" alt="Men Regular Fit Dyed/ombre Casual shirt">
+                        <div class="card-content">
+                            <p class="title">
+                                Men Regular Fit Dyed/ombre Casual shirt
+                            </p>
+                            <div class="price">
+                                <del>₹4499</del>
+                                <span class="amount">₹1,499</span>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="card sale" data-category="kids" data-tags="New Arrival"
+                        data-name="Kids Cotton Printed T-Shirt" data-price="599">
+                        <img src="images/ImageForKids_Product_1.png" alt="Kids Cotton Printed T-Shirt">
+                        <div class="card-content">
+                            <p class="title">
+                                Kids Cotton Printed T-Shirt
+                            </p>
+                            <div class="price">
+                                <del>₹899</del>
+                                <span class="amount">₹599</span>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="card bestseller" data-category="kids" data-tags="Bestseller, Denim"
+                        data-name="Kids Slim-Fit Denim Jeans" data-price="799">
+                        <img src="images/ImageForKids_Product_2.png" alt="Kids Slim-Fit Denim Jeans">
+                        <div class="card-content">
+                            <p class="title">
+                                Kids Slim-Fit Denim Jeans
+                            </p>
+                            <div class="price">
+                                <del>₹1,199</del>
+                                <span class="amount">₹799</span>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="card" data-category="kids" data-tags="Summer Collection"
+                        data-name="Kids Floral Print Dress" data-price="899">
+                        <img src="images/Girl_dress.png" alt="Kids Floral Print Dress">
+                        <div class="card-content">
+                            <p class="title">
+                                Kids Floral Print Dress
+                            </p>
+                            <div class="price">
+                                <del>₹1,299</del>
+                                <span class="amount">₹899</span>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="card sale" data-category="kids" data-tags="New Arrival, Winter Wear"
+                        data-name="Kids Striped Hoodie" data-price="999">
+                        <img src="images/hoodie_For_Kids.jpg" alt="Kids Striped Hoodie">
+                        <div class="card-content">
+                            <p class="title">
+                                Kids Striped Hoodie
+                            </p>
+                            <div class="price">
+                                <del>₹1,499</del>
+                                <span class="amount">₹999</span>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="section">
+            <div class="secondary-bg">
+                <div class="container flex wrap">
+                    <div class="box">
+                        <i class="fa-solid fa-truck"></i>
+                        <h5>
+                            <a href="#"> Free Shipping</a>
+                        </h5>
+                        <p class="des">free shipping on order over ₹499</p>
+                    </div>
+                    <div class="box">
+                        <i class="fa-solid fa-money-bill-1"></i>
+                        <h5>
+                            <a href="#">Cash On Delivery</a>
+                        </h5>
+                        <p class="des">The Internet Trend To Repeat</p>
+                    </div>
+                    <div class="box">
+                        <i class="fa-solid fa-gift"></i>
+                        <h5>
+                            <a href="#"> Gift For all</a>
+                        </h5>
+                        <p class="des">Recieve Gift When Subscribe</p>
+                    </div>
+                    <div class="box">
+                        <i class="fa-solid fa-clock"></i>
+                        <h5>
+                            <a href="#"> Opening Alll Week</a>
+                        </h5>
+                        <p class="des">6:00 am to 7:00 pm</p>
+                    </div>
+                </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2>New Latest</h2>
+                <div class="line"></div>
+
+                <div class="blog-container flex wrap">
+
+                    <div class="blog-box">
+                        <img src="images/news-image1.jpg" alt="Blog 1">
+                        <div class="blog-content">
+                            <h3 class="heading"><a href="#">Fashion Industry</a></h3>
+                            <p class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+                            <a href="#" class="blog-link">Read More</a>
+                        </div>
+                    </div>
+
+                    <div class="blog-box">
+                        <img src="images/news-image2.jpg" alt="Blog 2">
+                        <div class="blog-content">
+                            <h3 class="heading"><a href="#">Fashion Industry</a></h3>
+                            <p class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+                            <a href="#" class="blog-link">Read More</a>
+                        </div>
+                    </div>
+
+                    <div class="blog-box">
+                        <img src="images/news-image3.jpg" alt="Blog 3">
+                        <div class="blog-content">
+                            <h3 class="heading"><a href="#">Fashion Industry</a></h3>
+                            <p class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+                            <a href="#" class="blog-link">Read More</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews & Feedback Section -->
+        <section class="section">
+            <div class="container" id="reviews-section">
+                <h2>User Reviews &amp; Feedback</h2>
+                <div class="line"></div>
+
+                <form id="review-form" class="review-form" autocomplete="off">
+                    <div class="form-row">
+                        <label for="reviewerName">Your Name</label>
+                        <input type="text" id="reviewerName" name="reviewerName" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-row">
+                        <span class="label">Your Rating</span>
+                        <div class="star-input" id="star-input" aria-label="Star rating" role="radiogroup">
+                            <button type="button" class="star" data-value="1" aria-label="1 star" role="radio"
+                                aria-checked="false"><i class="fa-solid fa-star"></i></button>
+                            <button type="button" class="star" data-value="2" aria-label="2 stars" role="radio"
+                                aria-checked="false"><i class="fa-solid fa-star"></i></button>
+                            <button type="button" class="star" data-value="3" aria-label="3 stars" role="radio"
+                                aria-checked="false"><i class="fa-solid fa-star"></i></button>
+                            <button type="button" class="star" data-value="4" aria-label="4 stars" role="radio"
+                                aria-checked="false"><i class="fa-solid fa-star"></i></button>
+                            <button type="button" class="star" data-value="5" aria-label="5 stars" role="radio"
+                                aria-checked="false"><i class="fa-solid fa-star"></i></button>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <label for="reviewText">Your Feedback</label>
+                        <textarea id="reviewText" name="reviewText" rows="4" placeholder="Share your experience..."
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-submit-review">Submit Review</button>
+                </form>
+
+                <div id="reviews-list" class="reviews-grid" aria-live="polite"></div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="secondary-bg">
+                <form class="container flex wrap">
+                    <h3>Subscribe To Get News &amp; Offers</h3>
+                    <div class="input-container">
+                        <input type="email" id="email" name="email" placeholder="Enter Your Email" autocomplete="off"
+                            required>
+                        <button type="submit" class="btn-subscribe">Subscribe</button>
+                    </div>
+
+                    <div class="social-icons flex">
+                        <a href="" class="media"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="" class="media"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="" class="media"><i class="fa-brands fa-google"></i></a>
+                        <a href="" class="media"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="" class="media"><i class="fa-brands fa-linkedin-in"></i></a>
+
+                    </div>
+                </form>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer here -->
+    <footer class="section">
+        <div class=" footer-container container flex wrap">
+            <ul class="footer-list">
+                <li><a href="#" class="footer-link">About Us</a></li>
+                <li><a href="#" class="footer-link">Online store</a></li>
+                <li><a href="#" class="footer-link">Blog</a></li>
+                <li><a href="#" class="footer-link">Contact Us</a></li>
+            </ul>
+            <ul class="footer-list">
+                <li><a href="#" class="footer-link">Login/Register</a></li>
+                <li><a href="cart.html" class="footer-link">Your Cart</a></li>
+                <li><a href="#" class="footer-link">Wishlist Items</a></li>
+                <li><a href="#" class="footer-link">Your Checkout</a></li>
+            </ul>
+            <ul class="footer-list">
+                <li><a href="#" class="footer-link">FAQs</a></li>
+                <li><a href="#" class="footer-link">Term of Services</a></li>
+                <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                <li><a href="#" class="footer-link">Return Policy</a></li>
+            </ul>
+            <ul class="footer-list">
+                <li class="footer-logo">
+                    <a href="#" class="logo">Trendy<span>Go</span>
+                    </a>
+                </li>
+                <li>
+                    <p class="details">ABCD Street, XYZ City</p>
+                </li>
+                <li>
+                    <p class="details">xyz@gmail.com</p>
+                </li>
+                <li>
+                    <p class="details">+91 12345 67890</p>
+                </li>
+            </ul>
+
+
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright &copy; <a href="#" class="footer-link">TrendyGo.</a></p>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
