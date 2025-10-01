@@ -23,7 +23,7 @@ This project is designed to help small businesses showcase their products online
 bash
 Copy code
 
-## Installation / Deployment
+## Installation 
 1. Clone the repository:
 ```bash
 git clone https://github.com/vaibhav-thoke24/AICTE-FWD-Project-2025.git
